@@ -1,8 +1,30 @@
-tpm2-abrmd (2.4.0-1) UNRELEASED; urgency=medium
+tpm2-abrmd (3.0.0-1.1) unstable; urgency=medium
 
-  * update
+  * Non-maintainer upload
 
- -- SZ Lin (林上智) <szlin@debian.org>  Wed, 18 May 2022 10:03:32 +0800
+  [ Michael Hudson-Doyle ]
+  * Disable testsuite on armhf for now (the mocking the test harness
+    does fails when _FILE_BITS == 64) (Closes: #1067654).
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Thu, 11 Apr 2024 23:12:31 +0200
+
+tpm2-abrmd (3.0.0-1) unstable; urgency=low
+
+  [ Debian Janitor ]
+  * Apply multi-arch hints.
+    + libtss2-tcti-tabrmd-dev: Add Multi-Arch: same.
+
+  [ Ying-Chun Liu (PaulLiu) ]
+  * debian/watch: use tags instead of releases
+  * New upstream version 3.0.0
+
+ -- Ying-Chun Liu (PaulLiu) <paulliu@debian.org>  Mon, 12 Dec 2022 07:47:34 +0800
+
+tpm2-abrmd (2.4.1-1) unstable; urgency=low
+
+  * New upstream release 2.4.1
+
+ -- Ying-Chun Liu (PaulLiu) <paulliu@debian.org>  Sun, 10 Apr 2022 20:47:05 +0800
 
 tpm2-abrmd (2.4.0-1) unstable; urgency=low
 
