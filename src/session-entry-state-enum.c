@@ -25,9 +25,9 @@ session_entry_state_to_str (SessionEntryStateEnum state)
 GType
 session_entry_state_enum_get_type (void)
 {
-    static gsize g_define_type_id = 0;
+    static volatile gsize g_define_type_id__volatile = 0;
 
-    if (g_once_init_enter (&g_define_type_id)) {
+    if (g_once_init_enter (&g_define_type_id__volatile)) {
         static const GEnumValue my_enum_values[] = {
             {
                 SESSION_ENTRY_LOADED,
@@ -55,9 +55,9 @@ session_entry_state_enum_get_type (void)
 
         GType session_entry_state_enum_type =
             g_enum_register_static ("SessionEntryStateEnum", my_enum_values);
-        g_once_init_leave (&g_define_type_id,
+        g_once_init_leave (&g_define_type_id__volatile,
                            session_entry_state_enum_type);
     }
 
-    return g_define_type_id;
+    return g_define_type_id__volatile;
 }

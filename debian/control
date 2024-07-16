@@ -39,7 +39,6 @@ Architecture: any
 Depends: libtss2-tcti-tabrmd0 (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
-Multi-Arch: same
 Description: TPM2 Access Broker & Resource Management - static libraries and headers
  It is intended for use with the SAPI library (libsapi) like any other TCTI.
  The initialization function for this library is hard coded to connect to the

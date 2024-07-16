@@ -3,37 +3,6 @@ All notable changes to this project are documented in this file.
 
 The format is based on [Keep a CHANGELOG](http://keepachangelog.com/)
 
-### 3.0.0 - 2022-12-05
-
-### Fixed
-  - A bug in special command processing in TPM2_GetCapability when an
-    audit session is in use cuased tpm2-abrmd to abort.
-
-### Added
-  - New SELinux interfaces for communication with keylime
-
-### Changed
-  - DBUS permissions in tpm2-abrmd.conf to match the in-kernel RM, ie
-    /dev/tpmrm0, permissions. Now users MUST be in the tss group to
-    send to tpm2-abrmd over DBUS.
-
-### 2.4.1 - 2022-03-04
-### Added
-  - Contributor Covenant Code of Conduct.
-
-### Fixed
-  - superflous warning messages about tcti status.
-    - `WARNING **: 11:00:56.205: tcti_conf before: "(null)"`
-    - `WARNING **: 11:00:56.205: tcti_conf after: "mssim"`
-  - GCC 11 build error: error: argument 2 of `__atomic_load’ discards ‘volatile’ qualifier`
-  - Initialize gerror pointer variable to NULL to fix use of unitialized memory and segfault.
-  - Updated missing defaults in manpage.
-  - Port CI to composite actions in tpm2-software/ci.
-
-### Removed
-  - Dependency on 'which' utility in configure.ac.
-  - ubuntu-16.04 from CI.
-
 ### 2.4.0 - 2021-02-08
 ### Added
   - configure option --enable-asan which will cause the build to produce
